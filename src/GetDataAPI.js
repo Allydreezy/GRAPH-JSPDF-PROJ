@@ -14,7 +14,7 @@ const dataFetch = async(url) => {
 export default {
     getData: async() => {
         return [{
-                id: "productos",
+                id: "produtos",
                 nome: "Produtos",
                 items: await dataFetch(`/produtos`)
             },

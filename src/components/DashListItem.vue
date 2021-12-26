@@ -1,19 +1,17 @@
 <template>
-    <div class="q-pa-sm items-start q-gutter-sm">
-    <q-card class="my-card q-mb-md">
-        <q-card-section>
-            <div class="text-h6 text-blue-7">{{ title }}</div>
-            <div class="text-subtitle2">{{ description }}</div>
+    <q-card class="my-card">
+        <q-card-section class="cabecalho">
+            <strong>{{ title }}</strong>
+            <div>{{ description }}</div>
         </q-card-section>
 
         <q-separator />
 
         <q-card-section>
-            <div class="text-h3 text-center">{{ valor }} {{ unidade }}</div>
+            <div class="text-h4 text-center">{{ valor }} {{ unidade }}</div>
         </q-card-section>
 
     </q-card>
-    </div>
 </template>
 
 <script>
@@ -57,6 +55,6 @@ export default defineComponent({
 <style scoped>
 .my-card {
   width: 100%;
-  max-width: 250px;
+  max-width: 320px;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div id="main">
+  <div class="chart" :id="id">
     </div>
 </template>
 
@@ -9,10 +9,10 @@ import * as echarts from 'echarts';
 
 export default defineComponent({
   name: 'Chart',
-  props: ['option'],
+  props: ['option', 'id'],
   methods: {
     async initEChart() {
-      var myChart = charts.init(document.getElementById('main'));
+      const myChart = echarts.init(document.getElementById(this.id));
       // Draw the chart
       myChart.setOption(this.option);
     },
@@ -22,3 +22,10 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.chart {
+  width: 100%;
+  height: 400px;
+}
+</style>
